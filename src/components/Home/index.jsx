@@ -1,4 +1,4 @@
-import { Button, Container, Flex, Heading, HStack,Link,Text } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Heading, HStack,Link,Text } from '@chakra-ui/react'
 import React from 'react'
 import { Link  as RouterLink} from 'react-router-dom'
 import { LOGIN, REGISTER } from '../../lib/router'
@@ -6,14 +6,14 @@ import { LOGIN, REGISTER } from '../../lib/router'
 function Home() {
   return (
     <>
-    <HStack w="1200px" h="10vh" alignItems={"center"}  justifyContent="space-between">
-        <Heading color={'teal'}>Social-View</Heading>
+    <Flex width={"100vw"} h="10vh" justifyContent={"space-around"}mt="4" p="5" alignItems={"center"}>
+        <Heading color={'teal'} fontSize={["2rem","2rem","3rem","3em"]}>Social-View</Heading>
         <Flex gap="5">
-            <Button><Link as={RouterLink} to={LOGIN}>Login</Link></Button>
-            <Button><Link as={RouterLink} to={REGISTER}>Register</Link></Button>
+            <Button size={["sm","sm","md","md"]}><Link as={RouterLink} to={LOGIN}>Login</Link></Button>
+            <Button size={["sm","sm","md","md"]}><Link as={RouterLink} to={REGISTER}>Register</Link></Button>
         </Flex>
-    </HStack>
-    <Container>
+    </Flex>
+    <Container px="10">
         <Heading mt="20px"
         p="5"
          fontSize={["40px","50px","60px"]}>Social View</Heading>
